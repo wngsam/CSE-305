@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="loveBucket.Domain">
+    <class name="Profile" table="profile">
+        <id name="profileID" column="PROFILEID"></id>
+        <property name="ownerSSN" column="OWNERSSN" />
+        <property name="age" column="AGE"  />
+        <property name="datingAgeRangeStart" column="DATINGAGERANGESTART"  />
+        <property name="datingAgeRangeEnd" column="DATINGAGERANGEEND" />
+        <property name="datinGeoRange" column="DATINGEORANGE"  />
+        <property name="gender" column="M_F"  />
+        <property name="hobbies" column="HOBBIES"  />
+        <property name="height" column="HEIGHT"  />
+        <property name="weight" column="WEIGHT"  />
+        <property name="hairColor" column="HAIRCOLOR"  />
+        <property name="creationDate" column="CREATIONDATE" />
+        <property name="lastModDate" column="LASTMODDATE"  />
+    </class> 
+</hibernate-mapping>
+

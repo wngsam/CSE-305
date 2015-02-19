@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- was: <?xml version="1.0" encoding="UTF-8"?> -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation= "
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-4.0.xsd" >
+
+
+    <bean id="mainPageController" class="loveBucket.Controllers.MainPageController">
+        <property name="profileHandler">
+            <ref bean ="profileHandler"></ref>
+        </property>              
+        <property name="sessionFactory">
+            <ref bean ="sessionFactory"></ref>
+        </property>
+    </bean>
+    <bean id="searchPageController" class="loveBucket.Controllers.SearchPageController">
+        <property name="profileHandler">
+            <ref bean ="profileHandler"></ref>
+        </property>          
+        <property name="personHandler">
+            <ref bean ="personHandler"></ref>
+        </property>     
+    </bean> 
+      
+    <bean id="profilePageController" class="loveBucket.Controllers.ProfilePageController">
+        <property name="profileHandler">
+            <ref bean ="profileHandler"></ref>
+        </property>
+        <property name="datesHandler">
+            <ref bean ="datesHandler"></ref>
+        </property>
+    </bean>
+    <bean id="personPageController" class="loveBucket.Controllers.PersonPageController">
+        <property name="personHandler">
+            <ref bean ="personHandler"></ref>
+        </property>
+         <property name="profileHandler">
+            <ref bean ="profileHandler"></ref>
+        </property>
+        <property name="datesHandler">
+            <ref bean ="datesHandler"></ref>
+        </property>
+        
+    </bean>
+    <bean id="signupPageController" class="loveBucket.Controllers.SignupPageController">
+        <property name="personHandler">
+            <ref bean ="personHandler"></ref>
+        </property>
+    </bean>
+    <bean id="loginPageController" class="loveBucket.Controllers.LoginPageController">
+        <property name="personHandler">
+            <ref bean ="personHandler"></ref>
+        </property>
+        <property name="employeeHandler">
+            <ref bean ="employeeHandler"></ref>
+        </property>        
+    </bean>   
+    <bean id="managerPageController" class="loveBucket.Controllers.ManagerPageController">
+        <property name="personHandler">
+            <ref bean ="personHandler"></ref>
+        </property>
+        <property name="employeeHandler">
+            <ref bean ="employeeHandler"></ref>
+        </property>
+        <property name="profileHandler">
+            <ref bean ="profileHandler"></ref>
+        </property>        
+    </bean>
+    <bean id="employeePageController" class="loveBucket.Controllers.EmployeePageController">
+        <property name="employeeHandler">
+            <ref bean ="employeeHandler"></ref>
+        </property>        
+    </bean>       
+</beans>

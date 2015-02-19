@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="loveBucket.Domain">
+    <class name="Likes" table="likes">
+        <id name="liker" column="LIKER"></id>
+        <property name="likee" column="LIKEE" />
+        <property name="date_Time" column="DATE_TIME" />
+    </class> 
+</hibernate-mapping>

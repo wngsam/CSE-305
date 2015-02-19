@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="loveBucket.Domain">
+    <class name="Date" table="date">
+        <id name="profile1" column="PROFILE1"></id>
+        <property name="profile2" column="PROFILE2" />
+        <property name="CustRep" column="CUSTREP" />
+        <property name="Date_Time" column="DATE_TIME" />
+        <property name="Location" column="LOCATION" />
+        <property name="BookingFee" column="BOOKINGFEE" />
+        <property name="Comments" column="COMMENTS" />
+        <property name="User1Rating" column="USER1RATING" />
+        <property name="User2Rating" column="USER2RATING" />
+    </class> 
+</hibernate-mapping>

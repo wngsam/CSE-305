@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+       
+<hibernate-mapping package="loveBucket.Domain">
+    <class name="Person" table="person">
+        <id name="SSN" column="SSN"></id>
+        <property name="password" column="PASSWORD"/>
+        <property name="firstName" column="FIRSTNAME"/>
+        <property name="lastName" column="LASTNAME" />
+        <property name="street" column="STREET" />
+        <property name="city" column="CITY" />
+        <property name="state" column="STATE" />
+        <property name="zipcode" column="ZIPCODE" />
+        <property name="email" column="EMAIL" />
+        <property name="telephone" column="TELEPHONE" />
+    </class>
+</hibernate-mapping>
+
